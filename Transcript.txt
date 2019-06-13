@@ -1,0 +1,99 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20190613022325
+Username: WIN10\Admin
+RunAs User: WIN10\Admin
+Configuration Name: 
+Machine: WIN10 (Microsoft Windows NT 10.0.17134.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 6352
+PSVersion: 5.1.17134.765
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.17134.765
+BuildVersion: 10.0.17134.765
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Repos\Transcript.txt
+PS C:\> dir
+
+
+    Directory: C:\
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----         6/6/2019  12:55 AM                Intel
+d-----         6/6/2019   2:04 AM                Microsoft VS Code
+d-----        4/12/2018   5:08 AM                PerfLogs
+d-r---         6/6/2019   2:07 AM                Program Files
+d-r---         6/7/2019   2:55 PM                Program Files (x86)
+d-----        6/12/2019   5:32 PM                rep1
+d-----        6/13/2019   2:23 AM                Repos
+d-----        6/12/2019   2:52 PM                Repository
+d-r---         6/6/2019  12:58 AM                Users
+d-----        6/12/2019   6:14 PM                Windows
+
+
+PS C:\> cd repo
+cd : Cannot find path 'C:\repo' because it does not exist.
+At line:1 char:1
++ cd repo
++ ~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\repo:String) [Set-Location], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.SetLocationCommand
+cd : Cannot find path 'C:\repo' because it does not exist.
+At line:1 char:1
++ cd repo
++ ~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\repo:String) [Set-Location], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.SetLocationCommand
+
+PS C:\> cd repos
+PS C:\repos> dir
+
+
+    Directory: C:\repos
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----        6/13/2019   2:20 AM             26 test.Json
+-a----        6/13/2019   2:05 AM             24 test.ps1
+-a----        6/13/2019   2:06 AM             21 test.py
+-a----        6/13/2019   2:23 AM              0 Transcript.txt
+
+
+PS C:\repos> git status
+On branch master
+Your branch is up to date with 'master/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        Transcript.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\repos> git add .
+
+PS C:\repos> git status
+On branch master
+Your branch is up to date with 'master/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   Transcript.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   Transcript.txt
+PS C:\repos> stop-transcript
+**********************
+Windows PowerShell transcript end
+End time: 20190613170951
+**********************
